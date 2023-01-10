@@ -1,14 +1,21 @@
 [![deutsche Version](https://logos.oxidmodule.com/de2_xs.svg)](README.md)
 [![english version](https://logos.oxidmodule.com/en2_xs.svg)](README.en.md)
 
-# D³ Modulname für OXID eShop
+# D³ Twig Extensions für OXID eShop
 
-Hier Kurzbeschreibung einfügen
+zusätzliche Erweiterungen, die in den Twig-Templates des Shops verwendet werden können:
+
+- method_exists - Prüft, ob die Methode eines Objekts existiert.
+
+  ```
+  {% if method_exists(entity, 'getCreatedBy') %}
+      ({{ entity.createdBy.name }})
+  {% endif %}
+  ```
 
 ## Inhaltsverzeichnis
 
 - [Installation](#installation)
-- [Verwendung](#verwendung)
 - [Changelog](#changelog)
 - [Beitragen](#beitragen)
 - [Lizenz](#lizenz)
@@ -18,28 +25,16 @@ Hier Kurzbeschreibung einfügen
 
 Dieses Paket erfordert einen mit Composer installierten OXID eShop in einer in der [composer.json](composer.json) definierten Version.
 
-Bitte tragen Sie den folgenden Abschnitt in die `composer.json` Ihres Projektes ein:
-
-```
-  "extra": {
-    ...
-  }
-```
-
 Öffnen Sie eine Kommandozeile und navigieren Sie zum Stammverzeichnis des Shops (Elternverzeichnis von source und vendor). Führen Sie den folgenden Befehl aus. Passen Sie die Pfadangaben an Ihre Installationsumgebung an.
 
 
 ```bash
-php composer require d3/modulename:^2.0
+php composer require d3/oxid-twig-extensions:^1.0
 ```
 
 Sofern nötig, bestätigen Sie bitte, dass Sie `package-name` erlauben, Code auszuführen.
 
-Aktivieren Sie das Modul im Shopadmin unter "Erweiterungen -> Module".
-
-## Verwendung
-
-...
+Leeren Sie den TMP-Ordner Ihres Shops.
 
 ## Changelog
 
@@ -56,7 +51,7 @@ Wenn Sie eine Verbesserungsvorschlag haben, legen Sie einen Fork des Repositorie
 - Öffnen Sie einen Pull Request
 
 ## Lizenz
-(Stand: 06.05.2021)
+(Stand: 10.01.2023)
 
 Vertrieben unter der GPLv3 Lizenz.
 
@@ -67,7 +62,3 @@ Diese Software wird unter der GNU GENERAL PUBLIC LICENSE Version 3 vertrieben.
 ```
 
 Die vollständigen Copyright- und Lizenzinformationen entnehmen Sie bitte der [LICENSE](LICENSE.md)-Datei, die mit diesem Quellcode verteilt wurde.
-
-## weitere Lizenzen und Nutzungsbedingungen
-
-...

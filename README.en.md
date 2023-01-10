@@ -1,14 +1,21 @@
 [![deutsche Version](https://logos.oxidmodule.com/de2_xs.svg)](README.md)
 [![english version](https://logos.oxidmodule.com/en2_xs.svg)](README.en.md)
 
-# D³ Modulname for OXID eShop
+# D³ Twig extensions for OXID eShop
 
-Insert short description here
+additional extensions that can be used in the shop's Twig templates:
+
+- method_exists - Checks whether the method of an object exists.
+
+  ```
+  {% if method_exists(entity, 'getCreatedBy') %}
+      ({{ entity.createdBy.name }})
+  {% endif %}
+  ```
 
 ## Table of content
 
 - [Installation](#installation)
-- [How to use](#how-to-use)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
 - [License](#license)
@@ -18,27 +25,15 @@ Insert short description here
 
 This package requires an OXID eShop installed with Composer in a version defined in the [composer.json](composer.json).
 
-Please enter the following section in the `composer.json` of your project:
-
-```
-  "extra": {
-    ...
-  }
-```
-
 Open a command line and navigate to the root directory of the shop (parent directory of source and vendor). Execute the following command. Adapt the path details to your installation environment.
 
 ```bash
-php composer require d3/modulename:^2.0
+php composer require d3/oxid-twig-extensions:^1.0
 ``` 
 
 If necessary, please confirm that you allow `package-name` to execute code.
 
-Activate the module in Shopadmin under "Extensions -> Modules".
-
-## How to use
-
-...
+Clear the TMP folder of your shop.
 
 ## Changelog
 
@@ -55,7 +50,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 - Open a Pull Request
 
 ## License
-(status: 2022-07-30)
+(status: 2023-01-10)
 
 Distributed under the GPLv3 license.
 
@@ -66,7 +61,3 @@ This software is distributed under the GNU GENERAL PUBLIC LICENSE version 3.
 ```
 
 For full copyright and licensing information, please see the [LICENSE](LICENSE.md) file distributed with this source code.
-
-## Further licences and terms of use
-
-...
