@@ -6,11 +6,18 @@
 additional extensions that can be used in the shop's Twig templates:
 
 - method_exists - Checks whether the method of an object exists.
-
   ```
   {% if method_exists(entity, 'getCreatedBy') %}
       ({{ entity.createdBy.name }})
   {% endif %}
+  ```
+- getModuleSettingsService - get the module settings service
+  ```
+  {{ getModuleSettingsService().getString('myModuleSetting', 'myModuleId') }}
+  ```
+- getShopConfiguration - get the shop configuration
+  ```
+  {{ getShopConfiguration().getShopId() }}
   ```
 
 ## Table of content

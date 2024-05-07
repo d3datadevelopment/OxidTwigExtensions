@@ -4,3 +4,9 @@ services:
 
   D3\OxidTwigExtensions\MethodExistsExtension:
     tags: ['twig.extension']
+
+  D3\OxidTwigExtensions\ModuleSettingsServiceExtension:
+    tags: ['twig.extension']
+
+  D3\OxidTwigExtensions\ShopConfigurationExtension:
+    tags: ['twig.extension']

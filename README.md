@@ -6,11 +6,18 @@
 zusätzliche Erweiterungen, die in den Twig-Templates des Shops verwendet werden können:
 
 - method_exists - Prüft, ob die Methode eines Objekts existiert.
-
   ```
   {% if method_exists(entity, 'getCreatedBy') %}
       ({{ entity.createdBy.name }})
   {% endif %}
+  ```
+- getModuleSettingsService - liefert den Moduleinstellungsservice
+  ```
+  {{ getModuleSettingsService().getString('myModuleSetting', 'myModuleId') }}
+  ```
+- getShopConfiguration - liefert die Shopkonfiguration
+  ```
+  {{ getShopConfiguration().getShopId() }}
   ```
 
 ## Inhaltsverzeichnis
@@ -26,7 +33,6 @@ zusätzliche Erweiterungen, die in den Twig-Templates des Shops verwendet werden
 Dieses Paket erfordert einen mit Composer installierten OXID eShop in einer in der [composer.json](composer.json) definierten Version.
 
 Öffnen Sie eine Kommandozeile und navigieren Sie zum Stammverzeichnis des Shops (Elternverzeichnis von source und vendor). Führen Sie den folgenden Befehl aus. Passen Sie die Pfadangaben an Ihre Installationsumgebung an.
-
 
 ```bash
 php composer require d3/oxid-twig-extensions:^1.0
