@@ -25,7 +25,8 @@
     "GPL-3.0-or-later"
   ],
   "require": {
-    "oxid-esales/oxideshop-ce": "^7.0.0"
+    "oxid-esales/oxideshop-ce": "^7.0.0",
+    "twig/twig": "^3.6"
   },
   "autoload": {
     "psr-4": {
