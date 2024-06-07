@@ -10,3 +10,16 @@ services:
 
   D3\OxidTwigExtensions\ShopConfigurationExtension:
     tags: ['twig.extension']
+
+#  requires intl extension
+#  Jasny\Twig\DateExtension:
+#    tags: ['twig.extension']
+
+  Jasny\Twig\PcreExtension:
+    tags: ['twig.extension']
+
+  Jasny\Twig\TextExtension:
+    tags: [ 'twig.extension' ]
+
+  Jasny\Twig\ArrayExtension:
+    tags: [ 'twig.extension' ]
