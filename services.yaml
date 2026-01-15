@@ -14,6 +14,9 @@ services:
   D3\OxidTwigExtensions\IsObjectExtension:
     tags: ['twig.extension']
 
+  D3\OxidTwigExtensions\InstanceOfExtension:
+    tags: ['twig.extension']
+
 #  requires intl extension
 #  Jasny\Twig\DateExtension:
 #    tags: ['twig.extension']
