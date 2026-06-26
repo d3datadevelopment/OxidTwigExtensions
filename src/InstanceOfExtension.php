@@ -38,7 +38,9 @@ class InstanceOfExtension extends AbstractExtension
     public function twig_instance_of($entity, string $interface_name ): bool
     {
         if (!is_object($entity)) {
-            throw new InvalidArgumentException('Given entity is not of type object, got: '.get_class($entity));
+            throw new InvalidArgumentException(
+                'Given entity is not of type object, got: ' . get_debug_type($entity)
+            );
         }
 
         if (empty($interface_name)) {

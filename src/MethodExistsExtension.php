@@ -38,7 +38,9 @@ class MethodExistsExtension extends AbstractExtension
     public function twig_method_exists($entity, string $method ): bool
     {
         if (!is_object($entity)) {
-            throw new InvalidArgumentException('Given entity is not of type object, got: '.get_class($entity));
+            throw new InvalidArgumentException(
+                'Given entity is not of type object, got: ' . get_debug_type($entity)
+            );
         }
 
         if (empty($method)) {
